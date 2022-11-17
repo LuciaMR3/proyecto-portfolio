@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    background-color: #121212;
+    color: white;
+}
+
+/*.navItems{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 30px;
+}
+.navLink{
+    text-decoration: none;
+}*/
+/*header*/
+.drop-bg {
+    background-color: #121212;
+}
+
+.drop-item:hover {
+    background-color: #3a3a3a;
+}
+
+/*Estilos main*/
+.subtitle {
+    color: #5a9dc2;
+    padding: 20px 0;
+}
+
+/*Sobre mí*/
+h1 {
+    grid-area: title;
+    color: white;
+    font-size: 80px;
+    text-align: left;
+    margin: 50px;
+    padding: 50px;
+}
+
+.subtitle-one {
+    text-align: left;
+    grid-area: subtitle;
+}
+
+.hero {
+    display: flex;
+    padding: 64px;
+    gap: 64px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        " title subtitle subtitle"
+        "title text text"
+        "title btn btn"
+    ;
+}
+
+.text {
+    color: white;
+    grid-area: text;
+    padding: 20px 0;
+}
+
+.btn-1 {
+    text-decoration: none;
+    ;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 8px;
+    grid-area: btn;
+}
+
+.btn-1:hover {
+    background-color: #5a9dc2;
+    color: white;
+}
+
+.section-one {
+    padding: 80px;
+}
+
+.subtitle-two {
+    text-align: left;
+    padding: 20px 0;
+}
+
+.container {
+    margin: auto;
+    padding: auto;
+}
+
+.sobre-mi {
+
+    padding: 64px 30px 0 0;
+}
+
+/*Portfolio*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    background-color: #121212;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #3a3a3a
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.portfolio-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-dropdown-btn {
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-portfolio {
+    width: 50%;
+}
+
+/*Servicios*/
+.subtitle-three {
+    text-align: center;
+    padding: 20px;
+}
+
+.service-container {
+    display: flex;
+    gap: 50px;
+    text-align: center;
+    margin: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-icon {
+    width: 30%;
+}
+
+.service {
+    padding: 30px;
+    background-color: #5a9dc2;
+    border-radius: 15px;
+    width: 25rem;
+}
+
+.service-text {
+    color: #000;
+    padding: 20px;
+}
+
+.btn {
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-two {
+    padding: 80px;
+    margin-bottom: 60px;
+}
+
+/*Contacto*/
+.subtitle-four {
+    text-align: center;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formLabel {
+    padding: 20px;
+}
+
+.form-input {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 500px;
+    background: none;
+}
+
+.btn-2 {
+    background: none;
+    margin: 0 20px;
+}
+
+.form-btn {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-options {
+    padding: 20px;
+}
+
+/*Footer*/
+.footer-icon {
+    width: 70px;
+    padding: 0 20px 0 0;
+}
+
+.footer-options {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.footer-2 {
+    display: flex;
+    padding: 50px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    font-size: 20px;
+}
+
+.footer-text {
+    font-size: 16px;
+}
+
+.footer-icon {
+    width: 50px;
+}
+
+@media screen and (max-width: 700px) {
+
+    /*main*/
+    .subtitle {
+        font-size: 28px;
+    }
+
+    /*Sobre mí*/
+    .hero {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .subtitle-one {
+        text-align: center;
+    }
+
+    .text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .btn-sobre-mi {
+        display: flex;
+    }
+
+    .btn-1 {
+        align-items: center;
+        margin: auto;
+    }
+
+    .section-one {
+        margin: 0;
+        padding: 0;
+    }
+
+    .subtitle-two {
+        text-align: center;
+    }
+
+    /*portfolio*/
+    .carousel-portfolio {
+        width: 20rem;
+    }
+
+    .section-two {
+        padding: 0;
+    }
+
+    /*Servicios*/
+    .service {
+        width: 20rem;
+    }
+
+    .service-text {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
+    /*Contacto*/
+    .form-input {
+        width: 250px;
+    }
+
+    .form-btn {
+        padding: 0;
+    }
+
+    /*Footer*/
+    .footer-2 {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 1170px) and (min-width: 701px) {
+
+    /*Sobre mi*/
+    h1 {
+        font-size: 68px;
+        margin: 0;
+        padding: auto;
+    }
+
+    .section-one {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero {
+        margin: auto;
+        display: flex;
+    }
+
+}
