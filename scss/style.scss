@@ -1,0 +1,17 @@
+@import "html/home";
+@import "html/portfolio";
+@import "html/servicios";
+@import "html/sobre-mi";
+@import "utilities/extend";
+@import "utilities/mixin";
+@import "utilities/variables";
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main-container{
+    background-color: $color-principal;
+    color: $color-secundario;
+}

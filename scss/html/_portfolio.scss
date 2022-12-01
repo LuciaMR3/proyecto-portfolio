@@ -1,0 +1,19 @@
+@import "utilities/extend";
+@import "utilities/mixin";
+@import "utilities/variables";
+
+main {
+    .subtitle {
+        @include subtitle;
+    }
+
+    .subtitle-three {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .carousel-portfolio {
+        width: 60%;
+    }
+
+}

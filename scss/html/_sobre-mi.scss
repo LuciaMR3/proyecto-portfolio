@@ -1,0 +1,129 @@
+@import "utilities/extend";
+@import "utilities/mixin";
+@import "utilities/variables";
+
+main {
+    .container {
+        .experiencia {
+            .subtitle {
+                @include subtitle;
+            }
+
+            .subtitle-two {
+                text-align: left;
+                padding: 20px 0;
+            }
+        }
+
+        .educacion {
+            .subtitle {
+                @include subtitle;
+            }
+
+            .subtitle-two {
+                text-align: left;
+                padding: 20px 0;
+            }
+        }
+
+        .skills {
+            .subtitle {
+                @include subtitle;
+            }
+
+            .subtitle-two {
+                text-align: left;
+                padding: 20px 0;
+            }
+        }
+
+        .aptitudes {
+            .subtitle {
+                @include subtitle;
+            }
+
+            .subtitle-two {
+                text-align: left;
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        .hero {
+            .section-one {
+                .subtitle {
+                    font-size: 28px;
+                }
+
+                .subtitle-two {
+                    text-align: center;
+                }
+
+                .text {
+                    margin: 3rem;
+                }
+            }
+        }
+
+        .container {
+            .experiencia {
+                .subtitle {
+                    font-size: 28px;
+                }
+
+                .subtitle-two {
+                    text-align: center;
+                }
+
+                ul {
+                    margin: 3rem;
+                }
+            }
+
+            .educacion {
+                .subtitle {
+                    font-size: 28px;
+                }
+
+                .subtitle-two {
+                    text-align: center;
+                }
+
+                ul {
+                    margin: 3rem;
+                }
+            }
+
+            .skills {
+                .subtitle {
+                    font-size: 28px;
+                }
+
+                .subtitle-two {
+                    text-align: center;
+                }
+
+                ul {
+                    margin: 3rem;
+                }
+            }
+
+            .aptitudes {
+                .subtitle {
+                    font-size: 28px;
+                }
+
+                .subtitle-two {
+                    text-align: center;
+                }
+
+                ul {
+                    margin: 3rem;
+                }
+            }
+        }
+    }
+}

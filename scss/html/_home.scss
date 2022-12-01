@@ -1,0 +1,428 @@
+@import "utilities/extend";
+@import "utilities/mixin";
+@import "utilities/variables";
+
+/*Estilo header*/
+header {
+    .navbar-dark {
+        .container-fluid {
+            .navbar-collapse {
+                .navbar-nav {
+                    .dropdown {
+                        .drop-bg {
+                            background-color: $color-principal;
+
+                            .drop-item:hover {
+                                background-color: $color-hover-principal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Estilo main*/
+main {
+
+    //Sobre mí
+    .hero {
+        display: flex;
+        padding: 64px;
+        gap: 64px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            " title subtitle subtitle"
+            "title text text"
+            "title btn btn"
+        ;
+
+        h1 {
+            grid-area: title;
+            color: $color-secundario;
+            font-size: 80px;
+            text-align: left;
+            margin: 0 100px;
+            padding: 50px;
+        }
+
+        .sobre-mi {
+            padding: 64px 30px 0 0;
+        }
+
+        .section-one {
+            padding: 80px;
+
+            .subtitle {
+                @include subtitle;
+            }
+
+            .subtitle-one {
+                text-align: left;
+                grid-area: subtitle;
+            }
+
+            .text {
+                color: $color-secundario;
+                grid-area: text;
+                padding: 20px 0;
+
+            }
+
+            .btn-sobre-mi {
+                .btn-1 {
+                    @extend %btn-1;
+                }
+
+                .btn-1:hover {
+                    @extend %btn-1-hover;
+
+                }
+            }
+        }
+
+    }
+
+    //Portfolio
+    .section-two {
+        padding: 80px;
+        margin-bottom: 60px;
+
+        .portfolio-dropdown {
+            @include flex-center-center;
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+
+                .portfolio-dropdown-btn {
+                    padding: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .subtitle {
+                    @include subtitle;
+                }
+
+                .subtitle-two {
+                    text-align: left;
+                    padding: 20px 0;
+
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    list-style: none;
+                    text-align: center;
+                    background-color: $color-principal;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px $color-principal;
+                    z-index: 1;
+
+                    .dropdown-options {
+                        color: $color-secundario;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        @extend %block;
+
+                    }
+
+                    .dropdown-options:hover {
+                        background-color: $color-hover-principal;
+
+                    }
+
+                }
+            }
+
+            .dropdown:hover {
+                .dropdown-content {
+                    @extend %block;
+                }
+            }
+        }
+
+        .carousel-portfolio {
+            width: 50%;
+        }
+    }
+
+    //Servicios
+    #servicios {
+        .subtitle {
+            @include subtitle;
+        }
+
+        .subtitle-three {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .service-container {
+            display: flex;
+            gap: 50px;
+            text-align: center;
+            margin: 50px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .service {
+                padding: 30px;
+                background-color: $color-acento;
+                border-radius: 15px;
+                width: 25rem;
+
+                .service-icon {
+                    width: 30%;
+                }
+
+                .service-text {
+                    color: $color-principal;
+                    padding: 20px;
+
+                }
+            }
+
+        }
+
+        .btn {
+            text-align: center;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+
+            .btn-1 {
+                @extend %btn-1;
+            }
+
+            .btn-1:hover {
+                @extend %btn-1-hover;
+
+            }
+        }
+    }
+
+    //Contacto
+    #contacto {
+        .subtitle {
+            @include subtitle;
+        }
+
+        .subtitle-four {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .form {
+            @include flex-center-center;
+
+            .form-2 {
+                form {
+                    .form-container {
+                        .form-options {
+                            padding: 20px;
+
+                            .form-input {
+                                padding: 10px;
+                                border: none;
+                                border-bottom: 1px solid $color-secundario;
+                                width: 500px;
+                                background: none;
+
+                            }
+                        }
+
+                        .form-btn {
+                            padding: 20px;
+                            text-align: center;
+
+                            .btn-1 {
+                                @extend %btn-1;
+                            }
+
+                            .btn-1:hover {
+                                @extend %btn-1-hover;
+                            }
+
+                            .btn-2 {
+                                background: none;
+                                margin: 0 20px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Estilo footer*/
+footer {
+    .footer {
+        @include flex-center-center;
+
+        .footer-2 {
+            display: flex;
+            padding: 50px;
+
+            .footer-options {
+                display: flex;
+                padding: 20px;
+                align-items: center;
+
+                .footer-icon {
+                    width: 50px;
+                    padding: 0 20px 0 0;
+
+                }
+
+                .footer-text {
+                    font-size: 16px;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    /*main*/
+    main {
+
+        //Sobre mi
+        .hero {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+
+            h1 {
+                font-size: 48px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+            }
+
+            .section-one {
+                margin: 0;
+                padding: 0;
+
+                .subtitle {
+                    font-size: 28px;
+                }
+
+                .subtitle-one {
+                    text-align: center;
+                }
+
+                .text {
+                    font-size: 1rem;
+                    text-align: center;
+
+                }
+
+                .btn-sobre-mi {
+                    display: flex;
+
+                    .btn-1 {
+                        align-items: center;
+                        margin: auto;
+
+                    }
+                }
+            }
+        }
+
+        //Portfolio
+        .section-two {
+            padding: 0;
+
+            .portfolio-dropdown {
+                .dropdown {
+                    .subtitle-two {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .carousel-portfolio {
+                width: 20rem;
+            }
+        }
+
+        //Servicios
+        #servicios {
+            .service-container {
+                .service {
+                    width: 20rem;
+
+                    .service-text {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .btn {
+                padding: 0;
+                margin-bottom: 60px;
+
+            }
+        }
+
+        //Contacto
+        #contacto {
+            .form {
+                .form-2 {
+                    form {
+                        .form-container {
+                            .form-options {
+                                .form-input {
+                                    width: 20rem;
+                                }
+                            }
+
+                            .form-btn {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*Footer*/
+    footer {
+        .footer {
+            .footer-2 {
+                display: flex;
+                flex-direction: column;
+                padding: 40px 0 20px 0;
+
+            }
+        }
+    }
+}
+@media screen and (max-width: 1170px) and (min-width: 701px){
+    main{
+        .hero{
+            margin: auto;
+            display: flex;
+            h1{
+                font-size: 68px;
+                margin: 0;
+                padding: auto;
+            }
+            .section-one{
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

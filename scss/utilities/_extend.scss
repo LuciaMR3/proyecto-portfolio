@@ -1,0 +1,19 @@
+@import "utilities/variables";
+
+%block {
+    display: block;
+}
+
+%btn-1 {
+    text-decoration: none;
+    color: $color-secundario;
+    border: 1px solid $color-secundario;
+    border-radius: 15px;
+    padding: 8px;
+    grid-area: btn;
+}
+
+%btn-1-hover {
+    background-color: $color-acento;
+    color: $color-secundario;
+}

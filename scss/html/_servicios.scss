@@ -1,0 +1,20 @@
+@import "utilities/extend";
+@import "utilities/mixin";
+@import "utilities/variables";
+
+main {
+    #servicios {
+        .service-container {
+            .service {
+                a {
+                    @extend %btn-1;
+                }
+
+                a:hover {
+                    background-color: $color-principal;
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+}

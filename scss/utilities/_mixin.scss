@@ -1,0 +1,11 @@
+@import "utilities/variables";
+
+@mixin flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin subtitle {
+    color: $color-acento;
+    padding: 20px 0;
+}
