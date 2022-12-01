@@ -370,6 +370,9 @@ main .hero .section-one .btn-sobre-mi .btn-1:hover, main #servicios .btn .btn-1:
   padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
 
+body {
+  background-color: #121212; }
+
 .main-container {
   background-color: #121212;
   color: #ffffff; }
